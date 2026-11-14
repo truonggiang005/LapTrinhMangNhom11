@@ -1,0 +1,21 @@
+[ {
+  "code" : "LTM",
+  "name" : "Lập trình mạng",
+  "description" : "Kiến trúc máy chủ/máy trạm, giao thức mạng TCP/IP, lập trình đa luồng",
+  "questionCount" : 0
+}, {
+  "code" : "CSDL",
+  "name" : "Cơ sở dữ liệu",
+  "description" : "Hệ quản trị CSDL quan hệ, SQL, giao dịch ACID",
+  "questionCount" : 0
+}, {
+  "code" : "CTDL_GT",
+  "name" : "Cấu trúc dữ liệu và giải thuật",
+  "description" : "Cây, đồ thị, thuật toán sắp xếp và tìm kiếm",
+  "questionCount" : 0
+}, {
+  "code" : "KTMT",
+  "name" : "Kiến trúc máy tính",
+  "description" : "Kiến trúc bộ xử lý, tập lệnh và phân cấp nhớ",
+  "questionCount" : 0
+} ]

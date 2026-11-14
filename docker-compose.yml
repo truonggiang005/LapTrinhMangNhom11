@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  mysql_server1:
+    image: mysql:8.0
+    container_name: exam_mysql_server1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: exam_db_1
+    ports:
+      - "33061:3306"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./db/sample_data.sql:/docker-entrypoint-initdb.d/02_sample_data.sql:ro
+      - mysql1_data:/var/lib/mysql
+
+  mysql_server2:
+    image: mysql:8.0
+    container_name: exam_mysql_server2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: exam_db_2
+    ports:
+      - "33062:3306"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./db/sample_data.sql:/docker-entrypoint-initdb.d/02_sample_data.sql:ro
+      - mysql2_data:/var/lib/mysql
+
+  mysql_server3:
+    image: mysql:8.0
+    container_name: exam_mysql_server3
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: exam_db_3
+    ports:
+      - "33063:3306"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./db/sample_data.sql:/docker-entrypoint-initdb.d/02_sample_data.sql:ro
+      - mysql3_data:/var/lib/mysql
+
+  mysql_server4:
+    image: mysql:8.0
+    container_name: exam_mysql_server4
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: exam_db_4
+    ports:
+      - "33064:3306"
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./db/sample_data.sql:/docker-entrypoint-initdb.d/02_sample_data.sql:ro
+      - mysql4_data:/var/lib/mysql
+
+volumes:
+  mysql1_data:
+  mysql2_data:
+  mysql3_data:
+  mysql4_data:
